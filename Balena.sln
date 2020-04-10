@@ -1,7 +1,9 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balena.Supervisor", "src\Balena.Supervisor\Balena.Supervisor.csproj", "{9C62F0D4-20D1-4F36-AAAB-62E3AFCFDC98}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balena", "src\Balena\Balena.csproj", "{9C62F0D4-20D1-4F36-AAAB-62E3AFCFDC98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balena.Tests", "tests\Balena.Tests\Balena.Tests.csproj", "{38C965AF-CBAD-40E2-9062-F84FB7C31EDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,5 +15,9 @@ Global
 		{9C62F0D4-20D1-4F36-AAAB-62E3AFCFDC98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C62F0D4-20D1-4F36-AAAB-62E3AFCFDC98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C62F0D4-20D1-4F36-AAAB-62E3AFCFDC98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38C965AF-CBAD-40E2-9062-F84FB7C31EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38C965AF-CBAD-40E2-9062-F84FB7C31EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38C965AF-CBAD-40E2-9062-F84FB7C31EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38C965AF-CBAD-40E2-9062-F84FB7C31EDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

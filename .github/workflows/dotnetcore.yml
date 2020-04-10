@@ -22,4 +22,6 @@ jobs:
     - name: Build
       run: dotnet build --configuration Release --no-restore
     - name: Test
+      env:
+        BALENA_API_TOKEN: ${{ secrets.BALENA_API_TOKEN }}
       run: dotnet test --no-restore --verbosity normal
