@@ -12,17 +12,12 @@
     {
         private readonly HttpClient _client;
 
-        public string ApiUrl { get; } 
-        public string ApiToken { get; }
-
         public BalenaCloudConnection(string url, string apiToken)
         {
             this._client = CreateClient(url, apiToken);
-            ApiUrl = url;
-            ApiToken = apiToken;
         }
 
-        private HttpClient CreateClient(string url, string apiToken)
+        private static HttpClient CreateClient(string url, string apiToken)
         {
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiToken);
@@ -50,8 +45,8 @@
 
         public async Task<Application> GetApplicationById(int id)
         {
-            var balenaResponse = await _client.ExecuteAsync<BalenaResponse<List<Application>>>("application");
-            return balenaResponse.d[0];
+            var balenaResponse = await _client.ExecuteAsync<BalenaResponse<List<Application>>>($"application({id})");
+            return balenaResponse.d.Count > 0 ? balenaResponse.d[0] : null;
         }
     }
 }
